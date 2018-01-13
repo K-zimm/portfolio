@@ -209,6 +209,12 @@ table {
             .resume .content-area .category .details .detail-box .detail-cols a:hover {
               color: #7ba1e6; }
 
+@keyframes projectScroll {
+  from {
+    background-position: center top; }
+  to {
+    background-position: center bottom; } }
+
 .portfolio .info-section {
   width: 20%; }
 
@@ -231,15 +237,18 @@ table {
       margin-bottom: 56px; }
     .portfolio .content-area .work .projects {
       display: grid;
-      grid-template-columns: 1fr 1fr; }
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px; }
       .portfolio .content-area .work .projects .project-box {
+        position: relative;
         padding: 30px;
         transition: all .3s ease-in-out;
-        height: 300px; }
+        height: 400px; }
         .portfolio .content-area .work .projects .project-box:hover {
-          -webkit-box-shadow: 10px 10px 50px 0px rgba(64, 64, 71, 0.3);
-          -moz-box-shadow: 10px 10px 50px 0px rgba(64, 64, 71, 0.3);
-          box-shadow: 10px 10px 50px 0px rgba(64, 64, 71, 0.3); }
+          -webkit-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+          -moz-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+          box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+          animation: projectScroll 6s linear 0.2s 2 alternate; }
         .portfolio .content-area .work .projects .project-box h5 {
           font-weight: 600;
           font-size: 1.1rem;
@@ -250,8 +259,55 @@ table {
           font-size: 1rem;
           font-weight: 300;
           margin-bottom: 1rem; }
+        .portfolio .content-area .work .projects .project-box .grey-bg {
+          background-color: #404047;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+          overflow: hidden; }
+          .portfolio .content-area .work .projects .project-box .grey-bg:hover {
+            opacity: 0.7; }
+            .portfolio .content-area .work .projects .project-box .grey-bg:hover .project-info .project-detail {
+              transform: translate3d(0, 0, 0); }
+            .portfolio .content-area .work .projects .project-box .grey-bg:hover .project-info .project-title {
+              transform: translate3d(0, 0, 0); }
+          .portfolio .content-area .work .projects .project-box .grey-bg .project-info {
+            padding: 40px;
+            position: absolute;
+            bottom: 0; }
+            .portfolio .content-area .work .projects .project-box .grey-bg .project-info .project-detail {
+              font-size: 1.1rem;
+              text-transform: capitalize;
+              margin-bottom: 10px;
+              color: #918cd9;
+              opacity: 1;
+              transform: translate3d(-200px, 0, 0);
+              transition: transform .5s ease-in; }
+              .portfolio .content-area .work .projects .project-box .grey-bg .project-info .project-detail span {
+                border-right: 2px solid #7ba1e6;
+                padding-right: 5px; }
+            .portfolio .content-area .work .projects .project-box .grey-bg .project-info .project-title {
+              font-size: 1.8rem;
+              text-transform: uppercase;
+              font-weight: 700;
+              opacity: 1;
+              transform: translate3d(-200px, 0, 0);
+              transition: transform .5s .1s ease-in; }
+            .portfolio .content-area .work .projects .project-box .grey-bg .project-info .fa-long-arrow-right {
+              font-size: 1.8rem;
+              margin-left: 10px; }
       .portfolio .content-area .work .projects #loopLab {
-        background: url(../img/whiteBgSm.jpg) no-repeat center center;
+        background: url(../img/projects/loopLab.png) no-repeat center top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+      .portfolio .content-area .work .projects #mizuxe {
+        background: url(../img/projects/mizuxe.png) no-repeat center top;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
