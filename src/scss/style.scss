@@ -1,0 +1,84 @@
+@keyframes html {
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+@keyframes css {
+    from{width: 0%;}
+    to{width: 80%;}
+}
+
+@keyframes javascript {
+    from{width: 0%;}
+    to{width: 65%;}
+}
+
+@keyframes bootstrap {
+    from{width: 0%;}
+    to{width: 90%;}
+}
+
+@keyframes angular {
+    from{width: 0%;}
+    to{width: 15%;}
+}
+
+body {
+    margin-top: 105px;
+}
+
+.progress {
+    background-color: darkslategray;
+    width: 80%;
+
+    .progress-bar {
+        background-color: darkviolet;
+    }
+
+    #html{
+        animation-name: html;
+        animation-duration: 2s;
+    }
+
+    #css{
+        animation-name: css;
+        animation-duration: 2s;
+    }
+
+    #js{
+        animation-name: javascript;
+        animation-duration: 2s;
+    }
+
+    #bootstrap{
+        animation-name: bootstrap;
+        animation-duration: 2s;
+    }
+
+    #angular {
+        animation-name: angular;
+        animation-duration: 2s;
+    }
+}
+
+#bio {
+
+    margin-top: 100px;
+
+    img{
+        margin-top: -100px;
+    }
+
+    .fa {
+        font-size: 50px;
+        color: darkviolet;        
+    }
+
+    .fa:hover {
+        color: dimgray;
+    }
+}
+
+#skills {
+    margin-top: 50px;
+}

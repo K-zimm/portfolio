@@ -1,0 +1,96 @@
+@import "variables";
+
+.resume {
+
+    .info-section {
+        width: 20%;
+    }
+    
+    .container {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .content-area {
+        width: 80%;
+        background: aliceblue;
+        height: 100vh;
+        overflow: hidden;
+
+        .link {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .category {
+            margin-bottom: 56px;
+
+            h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 56px;
+            color: $text;
+            }          
+        
+            .details {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 56px;
+                grid-row-gap: 30px;
+
+                .detail-box {
+                    padding: 30px;
+                    transition: all .3s ease-in-out;
+                    max-width: 1000px;
+                    text-align: center;
+
+                    &:hover {
+                        -webkit-box-shadow: 10px 10px 20px 0px rgba(64,64,71,0.3);
+                        -moz-box-shadow: 10px 10px 20px 0px rgba(64,64,71,0.3);
+                        box-shadow: 10px 10px 20px 0px rgba(64,64,71,0.3);
+                    }
+
+                    h5 {
+                        font-weight: 600;
+                        font-size: 1.1rem;
+                        margin-bottom: 1.2rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: $mainColor;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: 300;
+                        margin-bottom: 1rem;
+                        color: $text;
+                    }
+
+                    .detail-cols {
+                        display: flex;
+                        justify-content: space-around;
+
+                        ul {
+                            list-style: square;
+                            li {
+                                margin-bottom: 10px;
+                            }
+                        }
+                        a {
+                            text-decoration: none;
+                            color: $mainColor;
+                            padding: 3px;
+                            transition: all .2s ease-in-out;
+                            &:hover {
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
