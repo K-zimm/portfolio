@@ -260,7 +260,7 @@ table {
           font-weight: 300;
           margin-bottom: 1rem; }
         .portfolio .content-area .work .projects .project-box .grey-bg {
-          background-color: #404047;
+          background-color: black;
           position: absolute;
           top: 0;
           bottom: 0;
@@ -270,7 +270,7 @@ table {
           transition: all 0.3s ease-in-out;
           overflow: hidden; }
           .portfolio .content-area .work .projects .project-box .grey-bg:hover {
-            opacity: 0.7; }
+            opacity: 0.9; }
             .portfolio .content-area .work .projects .project-box .grey-bg:hover .project-info .project-detail {
               transform: translate3d(0, 0, 0); }
             .portfolio .content-area .work .projects .project-box .grey-bg:hover .project-info .project-title {
@@ -281,6 +281,7 @@ table {
             bottom: 0; }
             .portfolio .content-area .work .projects .project-box .grey-bg .project-info .project-detail {
               font-size: 1.1rem;
+              line-height: 1.5rem;
               text-transform: capitalize;
               margin-bottom: 10px;
               color: #918cd9;
@@ -291,6 +292,7 @@ table {
                 border-right: 2px solid #7ba1e6;
                 padding-right: 5px; }
             .portfolio .content-area .work .projects .project-box .grey-bg .project-info .project-title {
+              color: #bab1e7;
               font-size: 1.8rem;
               text-transform: uppercase;
               font-weight: 700;
@@ -308,6 +310,12 @@ table {
         background-size: cover; }
       .portfolio .content-area .work .projects #mizuxe {
         background: url(../img/projects/mizuxe.png) no-repeat center top;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
+      .portfolio .content-area .work .projects #blogen {
+        background: url(../img/projects/blogen.png) no-repeat center top;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
