@@ -80,3 +80,24 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    body {
+        background: red;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        background: yellow;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        background: green;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        background: blue;
+    }
+}

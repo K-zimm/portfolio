@@ -143,6 +143,22 @@ table {
       line-height: 1.4;
       margin: 0 0 2rem 0; }
 
+@media (max-width: 767px) {
+  body {
+    background: red; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background: yellow; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background: green; } }
+
+@media (min-width: 1200px) {
+  body {
+    background: blue; } }
+
 .resume .info-section {
   width: 20%; }
 
