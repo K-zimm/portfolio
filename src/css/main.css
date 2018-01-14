@@ -270,7 +270,7 @@ table {
           transition: all 0.3s ease-in-out;
           overflow: hidden; }
           .portfolio .content-area .work .projects .project-box .grey-bg:hover {
-            opacity: 0.9; }
+            opacity: 0.85; }
             .portfolio .content-area .work .projects .project-box .grey-bg:hover .project-info .project-detail {
               transform: translate3d(0, 0, 0); }
             .portfolio .content-area .work .projects .project-box .grey-bg:hover .project-info .project-title {
@@ -321,6 +321,89 @@ table {
         -o-background-size: cover;
         background-size: cover; }
 
+.contact .container {
+  display: flex;
+  align-items: stretch; }
+
+.contact .info-section {
+  width: 35%;
+  margin-left: 20px; }
+
+.contact .content-area {
+  width: 65%;
+  background: aliceblue;
+  height: 100vh; }
+  .contact .content-area .form-container {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    height: 100%; }
+    .contact .content-area .form-container .contact-form {
+      position: absolute;
+      overflow-y: auto;
+      top: 56px;
+      left: -250px;
+      width: 500px;
+      height: calc(100% - 112px);
+      background: #404047;
+      color: aliceblue;
+      padding: 46px;
+      -webkit-box-shadow: 10px 10px 10px 0px rgba(145, 140, 217, 0.5);
+      -moz-box-shadow: 10px 10px 10px 0px rgba(145, 140, 217, 0.5);
+      box-shadow: 10px 10px 10px 0px rgba(145, 140, 217, 0.5); }
+      .contact .content-area .form-container .contact-form h4 {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        margin-top: 2rem; }
+      .contact .content-area .form-container .contact-form input, .contact .content-area .form-container .contact-form textarea {
+        background: transparent;
+        border: none;
+        padding: 10px 0;
+        border-bottom: 2px solid #bab1e7;
+        width: 100%;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.3;
+        color: aliceblue; }
+      .contact .content-area .form-container .contact-form button.primary-btn {
+        border: none;
+        font-size: 1.2rem;
+        width: 100%;
+        margin: 0 0 0 0; }
+  .contact .content-area .contact-section {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 56px 0 0 0;
+    height: 100vh;
+    overflow-y: auto; }
+    .contact .content-area .contact-section .contact-info h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #404047;
+      margin-bottom: 30px; }
+      .contact .content-area .contact-section .contact-info h1 span {
+        color: #34284b; }
+    .contact .content-area .contact-section .contact-info .contact-box {
+      padding: 30px;
+      transition: all .3s ease-in-out;
+      max-width: 1000px; }
+      .contact .content-area .contact-section .contact-info .contact-box:hover {
+        -webkit-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.3);
+        -moz-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.3);
+        box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.3); }
+      .contact .content-area .contact-section .contact-info .contact-box h5 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 1rem 0 1.5rem 0;
+        color: #918cd9; }
+      .contact .content-area .contact-section .contact-info .contact-box p {
+        color: #404047;
+        font-weight: 300;
+        line-height: 1.4;
+        margin: 0 0 2rem 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -350,7 +433,7 @@ body, html {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-right: 15px;
+  margin: 10px;
   transition: all .2s ease-in; }
   .primary-btn:hover {
     background: #bab1e7;
@@ -361,6 +444,7 @@ body, html {
   text-decoration: none;
   border-radius: 30px;
   text-align: center;
+  margin: 10px;
   color: #34284b;
   padding: 12px 27px;
   display: inline-block;
