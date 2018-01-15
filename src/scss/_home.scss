@@ -1,6 +1,6 @@
 @import "variables";
 @media (min-width: 1525px) {
-    .home {
+    #home {
         .container {
             display: flex;
             align-items: stretch;
@@ -68,7 +68,7 @@
 }
 
 @media (min-width: 995px) and (max-width: 1524px) {
-    .home {
+    #home {
         .container {
             display: flex;
             align-items: stretch;
@@ -135,7 +135,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 994px) {
-    .home {
+    #home {
         .container {
             display: flex;
             flex-direction: column;
@@ -205,7 +205,14 @@
 }
 
 @media (max-width: 767px) {
-    .home {
+    #home {
+        .menu-icon {
+            position: fixed;
+            right: 20px;
+            top: 15px;
+            padding: 20px;
+            z-index: 11;
+        }
         .container {
             display: flex;
             flex-direction: column;
