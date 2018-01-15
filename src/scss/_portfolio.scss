@@ -1,157 +1,414 @@
 @import "variables";
-
 @keyframes projectScroll {
-    from {background-position: center top;}
-    to {background-position: center bottom;}
+    from {
+        background-position: center top;
+    }
+    to {
+        background-position: center bottom;
+    }
 }
 
-.portfolio {
-
-    .info-section {
-        width: 20%;
-    }
-    
-    .container {
-        display: flex;
-        align-items: stretch;
-    }
-
-    .content-area {
-        width: 80%;
-        background: aliceblue;
-        height: 100vh;
-        overflow: hidden;
-
-        .work {
-            margin-bottom: 56px;
-
-            h1 {
-            font-weight: 700;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 56px;
-            }
-        
-            .projects {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 20px;
-
-                .project-box {
-                    position: relative;
-                    padding: 30px;
-                    transition: all .3s ease-in-out;
-                    height: 400px;
-
-                    &:hover {
-                        -webkit-box-shadow: 10px 10px 20px 0px rgba(64,64,71,0.4);
-                        -moz-box-shadow: 10px 10px 20px 0px rgba(64,64,71,0.4);
-                        box-shadow: 10px 10px 20px 0px rgba(64,64,71,0.4);                        
-                        animation: projectScroll 6s linear 0.2s 2 alternate;
-                    }
-
-                    h5 {
-                        font-weight: 600;
-                        font-size: 1.1rem;
-                        margin-bottom: 1.2rem;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                    }
-
-                    p {
-                        font-size: 1rem;
-                        font-weight: 300;
-                        margin-bottom: 1rem;
-                    }
-
-                    .grey-bg {
-                        background-color: black;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        right: 0;
-                        left: 0;
-                        opacity: 0;
-                        transition: all 0.3s ease-in-out;
-                        overflow: hidden;
-
+@media (min-width: 1525px) {
+    .portfolio {
+        .info-section {
+            width: 20%;
+        }
+        .container {
+            display: flex;
+            align-items: stretch;
+        }
+        .content-area {
+            width: 80%;
+            background: aliceblue;
+            height: 100vh;
+            overflow: hidden;
+            padding: 56px;
+            .work {
+                margin-bottom: 56px;
+                h1 {
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 56px;
+                }
+                .projects {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 20px;
+                    .project-box {
+                        position: relative;
+                        padding: 30px;
+                        transition: all .3s ease-in-out;
+                        height: 400px;
                         &:hover {
-                            opacity: 0.85;
-
+                            -webkit-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            -moz-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            animation: projectScroll 6s linear 0.2s 2 alternate;
+                        }
+                        h5 {
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            margin-bottom: 1.2rem;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        }
+                        p {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            margin-bottom: 1rem;
+                        }
+                        .grey-bg {
+                            background-color: black;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition: all 0.3s ease-in-out;
+                            overflow: hidden;
+                            &:hover {
+                                opacity: 0.85;
+                                .project-info {
+                                    .project-detail {
+                                        transform: translate3d(0, 0, 0);
+                                    }
+                                    .project-title {
+                                        transform: translate3d(0, 0, 0);
+                                    }
+                                }
+                            }
                             .project-info {
+                                padding: 40px;
+                                position: absolute;
+                                bottom: 0;
                                 .project-detail {
-                                    transform: translate3d(0, 0, 0);
+                                    font-size: 1.1rem;
+                                    line-height: 1.5rem;
+                                    text-transform: capitalize;
+                                    margin-bottom: 10px;
+                                    color: $secondaryColor;
+                                    opacity: 1;
+                                    transform: translate3d(-200px, 0, 0);
+                                    transition: transform .5s ease-in;
+                                    span {
+                                        border-right: 2px solid $blue;
+                                        padding-right: 5px;
+                                    }
                                 }
                                 .project-title {
-                                    transform: translate3d(0, 0, 0);
+                                    color: $highlight;
+                                    font-size: 1.8rem;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    opacity: 1;
+                                    transform: translate3d(-200px, 0, 0);
+                                    transition: transform .5s .1s ease-in;
                                 }
-                            }
-                        }
-                        
-                        .project-info {
-                            padding: 40px;
-                            position: absolute;
-                            bottom: 0;
-
-                            .project-detail {
-                                font-size: 1.1rem;
-                                line-height: 1.5rem; 
-                                text-transform: capitalize;
-                                margin-bottom: 10px;
-                                color: $secondaryColor;
-                                opacity: 1;
-                                transform: translate3d(-200px, 0, 0);
-                                transition: transform .5s ease-in;
-
-                                span {
-                                    border-right: 2px solid $blue;
-                                    padding-right: 5px;
+                                .fa-long-arrow-right {
+                                    font-size: 1.8rem;
+                                    margin-left: 10px;
                                 }
-                            }
-
-                            .project-title {
-                                color: $highlight;
-                                font-size: 1.8rem;
-                                text-transform: uppercase;
-                                font-weight: 700;
-                                opacity: 1;
-                                transform: translate3d(-200px, 0, 0);
-                                transition: transform .5s .1s ease-in;
-                            }
-
-                            .fa-long-arrow-right {
-                                font-size: 1.8rem;
-                                margin-left: 10px;
                             }
                         }
                     }
-                }
-
-                #loopLab {
-                background: url(../img/projects/loopLab.png) no-repeat center top;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                }
-
-                #mizuxe {
-                    background: url(../img/projects/mizuxe.png) no-repeat center top;
-                    -webkit-background-size: cover;
-                    -moz-background-size: cover;
-                    -o-background-size: cover;
-                    background-size: cover;
-                }
-
-                #blogen {
-                    background: url(../img/projects/blogen.png) no-repeat center top;
-                    -webkit-background-size: cover;
-                    -moz-background-size: cover;
-                    -o-background-size: cover;
-                    background-size: cover;
+                    #loopLab {
+                        background: url(../img/projects/loopLab.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                    #mizuxe {
+                        background: url(../img/projects/mizuxe.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                    #blogen {
+                        background: url(../img/projects/blogen.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
                 }
             }
-        }        
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1524px) {
+    .portfolio {
+        .info-section {
+            flex-direction: row;
+            width: 100%;
+            .info-box {
+                margin-right: 10%;
+            }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .content-area {
+            width: 100%;
+            background: aliceblue;
+            padding: 56px;
+            .work {
+                margin-bottom: 56px;
+                h1 {
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 56px;
+                }
+                .projects {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 20px;
+                    .project-box {
+                        position: relative;
+                        padding: 30px;
+                        transition: all .3s ease-in-out;
+                        height: 300px;
+                        &:hover {
+                            -webkit-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            -moz-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            animation: projectScroll 6s linear 0.2s 2 alternate;
+                        }
+                        h5 {
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            margin-bottom: 1.2rem;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        }
+                        p {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            margin-bottom: 1rem;
+                        }
+                        .grey-bg {
+                            background-color: black;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition: all 0.3s ease-in-out;
+                            overflow: hidden;
+                            &:hover {
+                                opacity: 0.85;
+                                .project-info {
+                                    .project-detail {
+                                        transform: translate3d(0, 0, 0);
+                                    }
+                                    .project-title {
+                                        transform: translate3d(0, 0, 0);
+                                    }
+                                }
+                            }
+                            .project-info {
+                                padding: 40px;
+                                position: absolute;
+                                bottom: 0;
+                                .project-detail {
+                                    font-size: 1.1rem;
+                                    line-height: 1.5rem;
+                                    text-transform: capitalize;
+                                    margin-bottom: 10px;
+                                    color: $secondaryColor;
+                                    opacity: 1;
+                                    transform: translate3d(-200px, 0, 0);
+                                    transition: transform .5s ease-in;
+                                    span {
+                                        border-right: 2px solid $blue;
+                                        padding-right: 5px;
+                                    }
+                                }
+                                .project-title {
+                                    color: $highlight;
+                                    font-size: 1.8rem;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    opacity: 1;
+                                    transform: translate3d(-200px, 0, 0);
+                                    transition: transform .5s .1s ease-in;
+                                }
+                                .fa-long-arrow-right {
+                                    font-size: 1.8rem;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                    #loopLab {
+                        background: url(../img/projects/loopLab.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                    #mizuxe {
+                        background: url(../img/projects/mizuxe.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                    #blogen {
+                        background: url(../img/projects/blogen.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .portfolio {
+        .info-section {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            .info-box {
+                margin-right: 3rem;
+            }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .content-area {
+            width: 100%;
+            background: aliceblue;
+            padding: 56px;
+            .work {
+                margin-bottom: 56px;
+                h1 {
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 56px;
+                }
+                .projects {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 20px;
+                    .project-box {
+                        position: relative;
+                        padding: 30px;
+                        transition: all .3s ease-in-out;
+                        height: 300px;
+                        
+                            -webkit-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            -moz-box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            box-shadow: 10px 10px 20px 0px rgba(64, 64, 71, 0.4);
+                            animation: projectScroll 6s linear 0.2s 2 alternate;
+                        
+                        h5 {
+                            font-weight: 600;
+                            font-size: 1.1rem;
+                            margin-bottom: 1.2rem;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        }
+                        p {
+                            font-size: 1rem;
+                            font-weight: 300;
+                            margin-bottom: 1rem;
+                        }
+                        .grey-bg {
+                            background-color: black;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition: all 0.3s ease-in-out;
+                            overflow: hidden;
+                            &:hover {
+                                opacity: 0.85;
+                                .project-info {
+                                    .project-detail {
+                                        transform: translate3d(0, 0, 0);
+                                    }
+                                    .project-title {
+                                        transform: translate3d(0, 0, 0);
+                                    }
+                                }
+                            }
+                            .project-info {
+                                padding: 40px;
+                                position: absolute;
+                                bottom: 0;
+                                .project-detail {
+                                    font-size: 1.1rem;
+                                    line-height: 1.5rem;
+                                    text-transform: capitalize;
+                                    margin-bottom: 10px;
+                                    color: $secondaryColor;
+                                    opacity: 1;
+                                    transform: translate3d(-200px, 0, 0);
+                                    transition: transform .5s ease-in;
+                                    span {
+                                        border-right: 2px solid $blue;
+                                        padding-right: 5px;
+                                    }
+                                }
+                                .project-title {
+                                    color: $highlight;
+                                    font-size: 1.8rem;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                    opacity: 1;
+                                    transform: translate3d(-200px, 0, 0);
+                                    transition: transform .5s .1s ease-in;
+                                }
+                                .fa-long-arrow-right {
+                                    font-size: 1.8rem;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                    #loopLab {
+                        background: url(../img/projects/loopLab.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                    #mizuxe {
+                        background: url(../img/projects/mizuxe.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                    #blogen {
+                        background: url(../img/projects/blogen.png) no-repeat center top;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
     }
 }

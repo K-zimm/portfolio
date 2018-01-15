@@ -28,7 +28,7 @@ body, html {
 
     .fa {
         font-size: 2rem;
-        color: $mainColor;
+        color: $highlight;
     }
 }
 
@@ -103,13 +103,6 @@ body, html {
             }
         }
     }
-
-.scroll {
-    height: 100vh;
-    padding: 56px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
 
 .menu-active {
     .menu-icon {
