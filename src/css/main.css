@@ -365,13 +365,15 @@ table {
             display: flex;
             justify-content: space-around; }
             #resume .content-area .category .details .detail-box .detail-cols ul {
-              list-style: square; }
+              list-style: none; }
               #resume .content-area .category .details .detail-box .detail-cols ul li {
-                margin-bottom: 10px; }
+                margin-bottom: 10px;
+                line-height: 1.5rem; }
             #resume .content-area .category .details .detail-box .detail-cols a {
               text-decoration: none;
               color: #34284b;
               padding: 3px;
+              border-bottom: 2px solid #bab1e7;
               transition: all .2s ease-in-out; }
               #resume .content-area .category .details .detail-box .detail-cols a:hover {
                 color: #7ba1e6; } }
@@ -436,16 +438,18 @@ table {
               margin: 10px;
               border: 3px solid #7ba1e6; }
             #resume .content-area .category .details .detail-box .detail-cols ul {
-              list-style: square;
+              list-style: none;
               margin: 5px;
               padding: 5px; }
               #resume .content-area .category .details .detail-box .detail-cols ul li {
-                margin-bottom: 10px; }
+                margin-bottom: 10px;
+                line-height: 1.5rem; }
             #resume .content-area .category .details .detail-box .detail-cols a {
               text-decoration: none;
               color: #34284b;
               padding: 3px;
-              transition: all .2s ease-in-out; }
+              transition: all .2s ease-in-out;
+              border-bottom: 2px solid #bab1e7; }
               #resume .content-area .category .details .detail-box .detail-cols a:hover {
                 color: #7ba1e6; } }
 
@@ -516,14 +520,16 @@ table {
               margin: 10px;
               border: 3px solid #7ba1e6; }
             #resume .content-area .category .details .detail-box .detail-cols ul {
-              list-style: square;
+              list-style: none;
               margin: 5px;
               padding: 5px; }
               #resume .content-area .category .details .detail-box .detail-cols ul li {
-                margin-bottom: 10px; }
+                margin-bottom: 10px;
+                line-height: 1.5rem; }
             #resume .content-area .category .details .detail-box .detail-cols a {
               text-decoration: none;
               color: #34284b;
+              border-bottom: 2px solid #bab1e7;
               padding: 3px;
               transition: all .2s ease-in-out; }
               #resume .content-area .category .details .detail-box .detail-cols a:hover {

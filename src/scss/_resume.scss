@@ -62,15 +62,17 @@
                             display: flex;
                             justify-content: space-around;
                             ul {
-                                list-style: square;
+                                list-style: none;
                                 li {
                                     margin-bottom: 10px;
+                                    line-height: 1.5rem;
                                 }
                             }
                             a {
                                 text-decoration: none;
                                 color: $mainColor;
                                 padding: 3px;
+                                border-bottom: 2px solid $highlight;
                                 transition: all .2s ease-in-out;
                                 &:hover {
                                     color: $blue;
@@ -153,11 +155,12 @@
                                 border: 3px solid $blue;
                             }
                             ul {
-                                list-style: square;
+                                list-style: none;
                                 margin: 5px;
                                 padding: 5px;
                                 li {
                                     margin-bottom: 10px;
+                                    line-height: 1.5rem;
                                 }
                             }
                             a {
@@ -165,6 +168,7 @@
                                 color: $mainColor;
                                 padding: 3px;
                                 transition: all .2s ease-in-out;
+                                border-bottom: 2px solid $highlight;
                                 &:hover {
                                     color: $blue;
                                 }
@@ -253,16 +257,18 @@
                                 border: 3px solid $blue;
                             }
                             ul {
-                                list-style: square;
+                                list-style: none;
                                 margin: 5px;
                                 padding: 5px;
                                 li {
                                     margin-bottom: 10px;
+                                    line-height: 1.5rem;
                                 }
                             }
                             a {
                                 text-decoration: none;
                                 color: $mainColor;
+                                border-bottom: 2px solid $highlight;
                                 padding: 3px;
                                 transition: all .2s ease-in-out;
                                 &:hover {
