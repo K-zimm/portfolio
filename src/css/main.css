@@ -921,6 +921,7 @@ table {
       display: inline-block;
       vertical-align: top;
       width: 50%;
+      margin-left: 25%;
       padding: 56px 0 0 0;
       height: 100vh;
       overflow-y: auto; }
